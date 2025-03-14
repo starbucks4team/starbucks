@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/cart.css" />
+    <script>
+      async function init() {
+        try {
+          const response = await fetch('http://localhost:3000/cart');
+          const datas = await response.json();
+          let html = '';
+          let sum = 0;
+          datas.forEach((item, index) => {
+            console.log(item);
+            sum += item.prodPrice * item.count;
+            html += `<div class="item"><img src="../assets/${item.prodNo}.jpg" /><div class="info"><div id="prodName">${item.prodName}</div><div id="prodPrice">${item.prodPrice}원</div><div  id="count">수량 : ${item.count}</div></div></div>`;
+          });
+          document.querySelector('#items').innerHTML = html;
+          document.querySelector('#price-sum').innerText = `${sum}원`;
+        } catch (err) {
+          console.error(err);
+        }
+      }
+      init();
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>장바구니</h1>
+      <div id="items">
+        <div class="item"></div>
+      </div>
+      <hr />
+      <div id="price-sum-container">
+        총 결제 금액: <span id="price-sum"></span>
+      </div>
+      <button>주문하기</button>
+    </div>
+  </body>
+</html>
