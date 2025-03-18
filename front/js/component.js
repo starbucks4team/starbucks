@@ -7,7 +7,3 @@ async function importPage(target) {
     '../components/' + target + '.html'
   );
 }
-
-window.onload = () => {
-  importPage('header');
-};
