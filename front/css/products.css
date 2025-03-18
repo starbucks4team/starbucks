@@ -1,0 +1,68 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background-color: green;
+}
+.product {
+  text-decoration: none;
+  color: black;
+}
+.product:hover .product-name {
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+#product-layout {
+  padding: 0 30px;
+  margin: 0 auto;
+  margin-top: 200px;
+  max-width: 1200px;
+}
+/* 4개 */
+#products-container {
+  display: grid;
+  column-gap: 10px;
+  row-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.product-img {
+  width: 100%;
+}
+.product-name {
+  text-align: center;
+  padding: 5px 0;
+  font-size: 16px;
+}
+
+/* 3개 */
+@media (max-width: 1100px) {
+  #products-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .product-name {
+    font-size: 14px;
+  }
+}
+
+/* 2개 */
+@media (max-width: 960px) {
+  #products-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .product-name {
+    font-size: 12px;
+  }
+}
+
+/* 2개 */
+@media (max-width: 480px) {
+  #products-container {
+    grid-template-columns: 1fr;
+  }
+  .product-name {
+    font-size: 10px;
+  }
+}
