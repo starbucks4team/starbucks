@@ -1,0 +1,79 @@
+body {
+  overflow-x: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+}
+#comment2 {
+  margin-top: 50px;
+}
+button {
+  margin-left: 10px;
+}
+.container {
+  max-width: 1200px;
+}
+.container > #image {
+  margin: 0 30px 0 0;
+}
+img {
+  width: 400px;
+}
+#title {
+  font-size: x-large;
+}
+.b {
+  font-weight: bold;
+}
+.fl {
+  display: flex;
+}
+#head {
+  border-bottom: 2px solid black;
+  padding-bottom: 18px;
+  margin-bottom: 20px;
+}
+#comment {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 20px;
+}
+#product-info {
+  padding: 10px 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+tr {
+  margin-bottom: 15px;
+  padding: 0 15px;
+}
+#alergy-container {
+  background-color: #f4f4f2;
+  padding: 13px 11px;
+  font-size: 14px;
+  border-radius: 3px;
+  margin-bottom: 23px;
+}
+@media screen and (max-width: 1200px) {
+  .container > #image {
+    margin: 0 30px 0 0;
+  }
+}
+#kcal-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  margin: 20px 0;
+}
+#kcal-info:nth-child(2n) {
+  text-align: right;
+}
+@media screen and (max-width: 728px) {
+  .container {
+    display: block;
+  }
+  img {
+    width: auto;
+    max-width: 400px;
+  }
+}

@@ -1,0 +1,45 @@
+img {
+  width: 150px;
+}
+.item {
+  margin: 20px 0;
+  display: flex;
+}
+.info {
+  margin: 0 0 20px 20px;
+  width: 500px;
+}
+button {
+  width: 200px;
+  height: 50px;
+  float: right;
+  background-color: #007042;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+}
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 30px;
+}
+#prodName {
+  font-size: 24px;
+}
+#prodPrice,
+#count {
+  text-align: right;
+}
+#prodPrice {
+  margin-top: 20px;
+  font-size: 20px;
+}
+#price-sum-container {
+  font-size: 20px;
+  text-align: right;
+  margin-bottom: 10px;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
