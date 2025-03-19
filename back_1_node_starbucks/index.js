@@ -3,13 +3,8 @@ const app = express();
 const port = 3000;
 const cors = require('cors');
 const { products, carts } = require('./data');
-app.use(cors());
 
-//get 요청이 되었을 때 할 일
-app.get('/', (req, res) => {
-  res.send('WELCOME');
-});
-//app.post()
+app.use(cors());
 
 app.get('/product', (req, res) => {
   //   res.send('아메리카노, 아이스아메리카노, 라떼');
@@ -42,6 +37,54 @@ app.get('/cart', (req, res) => {
   res.json(cart);
 });
 
+
+
+app.get('/products', (req, res) => {
+  //   res.send('아메리카노, 아이스아메리카노, 라테');
+  console.log('GET: /products');
+  const products = [
+    { prodNo: 'C0001', prodName: '카페 아메리카노' },
+    { prodNo: 'C0002', prodName: '아이스 카페 아메리카노' },
+    { prodNo: 'C0003', prodName: '카푸치노' },
+    { prodNo: 'C0004', prodName: '아이스 카페 라떼' },
+    { prodNo: 'C0005', prodName: '콜드 브루 몰트' },
+    { prodNo: 'C0006', prodName: '아이스 라벤더 카페 브레베' },
+    { prodNo: 'C0007', prodName: '스타벅스 1호점 크림 라떼' },
+  ];
+  res.json(products);
+});
+
+app.get('/orderhistory', (req, res) => {
+  console.log('GET: /orderhistory');
+  const orderhistory = [
+    {
+      orderNo: '97',
+      orderDate: '2025-03-07',
+      prodNos: ['C001', 'C002'],
+      prodNames: ['아메리카노', '라테'],
+      prices: ['1000', '1000'],
+      quantities: ['1', '1'],
+    },
+    {
+      orderNo: '46',
+      orderDate: '2025-03-07',
+      prodNos: ['C001', 'C002'],
+      prodNames: ['아메리카노'],
+      prices: ['1000'],
+      quantities: ['1'],
+    },
+    {
+      orderNo: '12',
+      orderDate: '2025-03-01',
+      prodNos: ['C002'],
+      prodNames: ['라테'],
+      prices: ['1000'],
+      quantities: ['1'],
+    },
+  ];
+  res.json(orderhistory);
+});
+
 app.listen(port, () => {
-  console.log('3000번 포트에서 backend server 실행중...');
+  console.log(`port ${port}: listening...`);
 });
