@@ -1,11 +1,3 @@
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 200px;
-  background-color: green;
-}
 .product {
   text-decoration: none;
   color: black;
@@ -15,12 +7,6 @@
   font-weight: 600;
 }
 
-#product-layout {
-  padding: 0 30px;
-  margin: 0 auto;
-  margin-top: 200px;
-  max-width: 1200px;
-}
 /* 4개 */
 #products-container {
   display: grid;

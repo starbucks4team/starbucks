@@ -13,6 +13,8 @@ async function getOrderHistory(url) {
 }
 
 window.onload = async () => {
+  importPage('header');
+  importPage('footer');
   let result = await getOrderHistory('http://127.0.0.1:3000/orderhistory');
   for (let i = 0; i < result.length; i++) {
     let container = document.querySelector('#order-table>tbody');

@@ -1,18 +1,3 @@
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 200px;
-  background-color: green;
-}
-#order-layout {
-  padding: 0 30px;
-  margin: 0 auto;
-  margin-top: 200px;
-  max-width: 1200px;
-}
-
 #order-table {
   width: 100%;
   border-collapse: collapse;
