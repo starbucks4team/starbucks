@@ -1,5 +1,6 @@
 #layout {
   padding: 0 30px;
-  margin: 0 auto;
+  margin: 50px auto;
   max-width: 1200px;
+  min-height: calc(100vh - 493px);
 }
