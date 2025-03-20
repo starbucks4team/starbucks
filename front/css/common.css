@@ -4,3 +4,28 @@
   max-width: 1200px;
   min-height: calc(100vh - 493px);
 }
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-title {
+  padding-bottom: 30px;
+}
+
+.mw-960-hide {
+  display: block;
+}
+.mw-960-show {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .mw-960-hide {
+    display: none;
+  }
+  .mw-960-show {
+    display: block;
+  }
+}
