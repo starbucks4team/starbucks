@@ -1,15 +1,15 @@
-img {
+.item img {
   width: 150px;
 }
-.item {
+#layout .item {
   margin: 20px 0;
   display: flex;
 }
-.info {
+.item .info {
   margin: 0 0 20px 20px;
   width: 500px;
 }
-button {
+#layout button {
   width: 200px;
   height: 50px;
   float: right;
@@ -20,7 +20,7 @@ button {
   text-align: center;
   text-decoration: none;
 }
-.container {
+#layout .container {
   max-width: 700px;
   margin: 0 auto;
   padding: 30px;
